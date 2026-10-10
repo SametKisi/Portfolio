@@ -1,6 +1,14 @@
 import { useQuery } from "@tanstack/react-query"
 import { ArrowRightIcon, CalendarBlankIcon, ClockIcon, GithubLogoIcon } from "@phosphor-icons/react"
-
+interface Repo {
+    id: number
+    name: string
+    description: string | null
+    stargazers_count: number
+    created_at: string
+    pushed_at: string
+    html_url: string
+}
 
 const Home = () => {
 
@@ -139,10 +147,14 @@ const Home = () => {
 
     )
 }
-const getRepos = async () => {
+const getRepos = async (): Promise<Repo[]> => {
     await new Promise((resolve) => setTimeout(resolve, 1000))
     const response = await fetch("https://api.github.com/users/SametKisi/repos")
+    if (!response.ok) {
+        throw new Error(`GitHub API hatası: ${response.status}`)
+    }
     return await response.json()
 }
 
 export default Home
+

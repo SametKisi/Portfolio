@@ -1,6 +1,5 @@
 import { ArrowRightIcon, GithubLogoIcon, EnvelopeSimpleIcon } from "@phosphor-icons/react"
 import { Link } from "react-router-dom"
-import About from "./About"
 
 const Header = () => {
     return (

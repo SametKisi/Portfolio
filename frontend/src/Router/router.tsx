@@ -1,7 +1,6 @@
 import MainLayout from '../pages/Layout';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Contact from '../pages/Contact';
 import NotFound from '../pages/NotFound.tsx';
 import { createBrowserRouter } from 'react-router-dom';
 

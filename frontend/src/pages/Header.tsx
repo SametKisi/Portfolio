@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="flex flex-1 justify-center gap-3 text-white ">
                     <Link to={"/"} className="cursor-pointer">Ana sayfa</Link>
                     <Link to={"About"} className="cursor-pointer">Hakkımda</Link>
-                    <div className="cursor-pointer">İletişim</div>
+                    <a href="mailto:samet12kisi@gmail.com" className="cursor-pointer">İletişim</a>
                 </div>
                 <a href={"https://github.com/SametKisi/"}
                     target="_blank"

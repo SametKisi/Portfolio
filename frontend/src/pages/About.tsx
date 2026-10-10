@@ -32,7 +32,7 @@ const About = () => {
                 <div className="bg-white border border-gray-200 shadow-sm min-h-38 h-fit w-fit rounded-md flex flex-1 p-10 gap-2">
                     <div className="flex flex-col ml-5">
                         <h2 className="font-bold">Kişisel Gelişim</h2>
-                        <p>Kişisel gelişim alanında ilgiliyim</p>
+                        <p>Kişisel gelişim</p>
                     </div>
                 </div>
                 

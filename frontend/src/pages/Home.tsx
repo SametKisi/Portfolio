@@ -1,21 +1,9 @@
-import { useQuery } from "@tanstack/react-query"
+import useRepos from "../hooks/useRepos"
 import { ArrowRightIcon, CalendarBlankIcon, ClockIcon, GithubLogoIcon } from "@phosphor-icons/react"
-interface Repo {
-    id: number
-    name: string
-    description: string | null
-    stargazers_count: number
-    created_at: string
-    pushed_at: string
-    html_url: string
-}
+import { Link } from "react-router-dom"
 
 const Home = () => {
-
-    const { data, isPending, error } = useQuery({
-        queryKey: ['repos'],
-        queryFn: getRepos,
-    })
+    const { data, isPending, error } = useRepos()
 
     if (error) {
         alert("something went wrong")
@@ -41,17 +29,17 @@ const Home = () => {
                             <div
                                 className="p-4 bg-white border border-gray-200 rounded-xl shadow-sm min-h-50 flex flex-col items-start text-left"
                             >
-                                <div className="self-end"><div className="bg-gray-200 p-3 rounded-md"/></div>
+                                <div className="self-end"><div className="bg-gray-200 p-3 rounded-md" /></div>
 
-                                <h3 className="font-semibold break-words"><div className="bg-gray-200 p-3 w-40 rounded-md mb-2"/></h3>
+                                <h3 className="font-semibold break-words"><div className="bg-gray-200 p-3 w-40 rounded-md mb-2" /></h3>
                                 <p className="text-gray-500 line-clamp-3">
-                                    <div className="bg-gray-200 p-3 w-30 rounded-md"/>
+                                    <div className="bg-gray-200 p-3 w-30 rounded-md" />
                                 </p>
 
                                 <div className="mt-auto pt-4 w-full flex items-center justify-between gap-2">
                                     <div className="flex flex-1 items-center gap-2 text-[#aab7c8]">
                                         <CalendarBlankIcon className="size-5" />
-                                        <div className="bg-gray-200 p-3 w-20 rounded-md"/>
+                                        <div className="bg-gray-200 p-3 w-20 rounded-md" />
                                     </div>
                                     <a
                                         target="_blank"
@@ -103,11 +91,11 @@ const Home = () => {
                                                 rel="noreferrer">
                                                 <GithubLogoIcon className="size-6" />
                                             </a>
-                                            <div
+                                            <Link to={'/' + p.name}
                                                 className="text-[#2563EB] flex items-center gap-2 cursor-pointer"
                                             >
                                                 Devamını Oku <ArrowRightIcon className="size-4" />
-                                            </div>
+                                            </Link>
                                         </div>
                                     </li>
                                 ))}
@@ -147,14 +135,7 @@ const Home = () => {
 
     )
 }
-const getRepos = async (): Promise<Repo[]> => {
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    const response = await fetch("https://api.github.com/users/SametKisi/repos")
-    if (!response.ok) {
-        throw new Error(`GitHub API hatası: ${response.status}`)
-    }
-    return await response.json()
-}
+
 
 export default Home
 

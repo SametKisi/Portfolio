@@ -1,6 +1,7 @@
 import MainLayout from '../pages/Layout';
 import Home from '../pages/Home';
 import About from '../pages/About';
+import ProjectedDetail from '../pages/ProjectedDetail.tsx';
 import NotFound from '../pages/NotFound.tsx';
 import { createBrowserRouter } from 'react-router-dom';
 
@@ -17,6 +18,10 @@ export const router = createBrowserRouter([
             {
                 path: 'about',
                 element: <About />,
+            },
+            {
+                path: '/:name',
+                element: <ProjectedDetail />,
             },
 
         ],

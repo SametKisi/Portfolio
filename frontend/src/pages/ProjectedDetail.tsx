@@ -7,7 +7,7 @@ const ProjectedDetail = () => {
     const { name } = useParams() // url alır
 
 
-    const { data, isPending, error } = useRepos()
+    const { data, error } = useRepos()
     const { data: readme, isPending: readmePending } = useReadme(name)
 
     if (error) {

@@ -24,7 +24,7 @@ const ProjectedDetail = () => {
                 <div className="p-10">
                     <p className="absolute right-5 ">⭐ {repo.stargazers_count}</p>
                     <h3 className="text-lg font-semibold">{repo.name}</h3>
-                    {name === "MailGo" && (<div className="border-b-2 border-gray-200">MailGo bir çoklu mail gönderme platformudur.</div>)}
+
                     {readmePending ? <div className="animate-pulse">Yükleniyor...</div> : <ReactMarkdown>{readme}</ReactMarkdown>}
                     <div className="flex flex-1">
                         <p className="flex flex-1">{new Date(repo.created_at).toLocaleDateString("tr-TR")}</p>

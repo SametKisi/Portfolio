@@ -15,7 +15,9 @@ const ProjectedDetail = () => {
     }
 
 
-    const repo = data?.find((f) => f.name === name)
+    if(!repo){
+        const repo = data?.find((f) => f.name === name)
+    }
 
     if (isPending ){
         return(

@@ -15,16 +15,19 @@ const ProjectedDetail = () => {
     }
 
 
+
+    const repo = data?.find((f) => f.name === name)
+    
     if(!repo){
-        const repo = data?.find((f) => f.name === name)
+        return;
     }
 
-    if (isPending ){
-        return(
+    if (isPending) {
+        return (
             <div className="animate-pulse">Yükleniyor...</div>
         )
     }
-    if(error){
+    if (error) {
         alert("Bir sorun oluştu")
     }
 

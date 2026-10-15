@@ -16,27 +16,20 @@ const About = () => {
                 <h2 className="text-2xl font-bold shrink-0">İlgi Alanlarım</h2>
                 <div className="flex-1 border-t border-gray-200"></div>
             </div>
-            <div className="flex flex-1 gap-5">
-                <div className="bg-white border border-gray-200 shadow-sm min-h-38 w-fit h-fit rounded-md flex flex-1 p-10 gap-2">
+            <div className="flex flex-1 gap-4">
+                <div className="bg-white border border-gray-200 shadow-sm min-h-38 w-fit h-fit rounded-md flex flex-1 p-4 gap-2">
                     <div className="flex flex-col ml-5">
                         <h2 className="font-bold">Yazılım</h2>
                         <p>Ben oyun, web, mobil gibi alanlarda kendimi geliştirdim</p>
                     </div>
                 </div>
-                <div className="bg-white border border-gray-200 shadow-sm min-h-38 w-fit h-fit rounded-md flex flex-1 p-10 gap-2">
-                    <div className="flex flex-col ml-5">
+                <div className="bg-white border border-gray-200 shadow-sm min-h-38 max-w-50 md:max-w-200 break-words w-fit h-fit rounded-md flex flex-1 p-3 gap-2">
+                    <div className="flex flex-col">
                         <h2 className="font-bold">Öğrencilik</h2>
                         <p>İnönü üniversitesinde Bilgisayar mühendisliği 2.sınıf öğrencisiyim</p>
                     </div>
                 </div>
-                <div className="bg-white border border-gray-200 shadow-sm min-h-38 h-fit w-fit rounded-md flex flex-1 p-10 gap-2">
-                    <div className="flex flex-col ml-5">
-                        <h2 className="font-bold">Kişisel Gelişim</h2>
-                        <p>Kişisel gelişim</p>
-                    </div>
-                </div>
                 
-
             </div>
         </div>
     )

@@ -1,4 +1,4 @@
-import { ArrowRightIcon, GithubLogoIcon, EnvelopeSimpleIcon, XIcon, EnvelopeIcon, InstagramLogoIcon } from "@phosphor-icons/react"
+import { ArrowRightIcon, GithubLogoIcon, EnvelopeSimpleIcon, XIcon, EnvelopeIcon, InstagramLogoIcon, LayoutIcon } from "@phosphor-icons/react"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
@@ -28,6 +28,14 @@ const Header = () => {
                         </div>
                         <a href="https://instagram.com/_samet.kisi_" target="_blank" rel="noreferrer" className="text-gray-200 text-sm font-medium">
                             @_samet.kisi_
+                        </a>
+                    </div>
+                    <div className="flex flex-col w-full bg-gray-700/40 rounded-xl border border-gray-600/50 hover:bg-gray-700/60 transition-colors p-3 cursor-pointer">
+                        <div className="flex items-center gap-2 text-xs text-gray-400 uppercase tracking-wider font-semibold mb-1">
+                            <LayoutIcon className="size-4" /> Bionluk
+                        </div>
+                        <a href="https://bionluk.com/sametkisi" target="_blank" rel="noreferrer" className="text-gray-200 text-sm font-medium">
+                            sametkisi
                         </a>
                     </div>
                 </div>

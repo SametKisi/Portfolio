@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <>
             {isContactOpen && <div className="fixed h-screen w-full  bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
-                <div className="w-80 h-fit flex flex-col bg-gray-800 rounded-lg p-6 text-white gap-5 shadow-2xl">
+                <div className="w-80 h-fit flex flex-col bg-[#0F3040] rounded-lg p-6 text-white gap-5 shadow-2xl">
                     <div className="flex">
                         <h3 className="text-center text-xl flex flex-1">
                             İletişim Bilgileri
@@ -40,7 +40,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>}
-            <div className="flex w-full bg-[#1A2332] h-fit items-center px-10 p-5 whitespace-nowrap ">
+            <div className="flex w-full bg-[#233D4D] h-fit items-center px-10 p-5 whitespace-nowrap ">
                 <div className="text-white mr-2">{'</> Samet.dev |'}</div>
                 <div className="flex flex-1 justify-center gap-3 text-white ">
                     <Link to={"/"} className="cursor-pointer ">Ana sayfa</Link>
@@ -53,7 +53,7 @@ const Header = () => {
                     <GithubLogoIcon className="size-6" />
                 </a>
             </div>
-            <div className="flex flex-col bg-[#0E1620] h-fit w-full text-white gap-4 p-10">
+            <div className="flex flex-col bg-[#0F3040] h-fit w-full text-white gap-4 p-10">
                 <div className="font-semibold text-[#AAB7C8]">
                     Merhaba. Ben Samet
                 </div>
